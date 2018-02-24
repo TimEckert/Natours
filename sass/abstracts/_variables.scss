@@ -12,9 +12,26 @@ $color-3-dark: #5643fa;
 
 $color-grey-light-1: #f7f7f7;
 $color-grey-dark: #777;
+$color-grey-light-2: #eee;
 
 $color-white: #fff;
 $color-black: #000;
+
+// GRADIENTS
+$linear-gradient-1: linear-gradient(
+    to right bottom, 
+    $color-1-light, 
+    $color-1-dark);
+$linear-gradient-1-alpha: linear-gradient(
+    to right bottom,
+    rgba($color-1-light, 0.8),
+    rgba($color-1-dark, 0.8));
+$linear-gradient-2: linear-gradient(
+    to right bottom, 
+    $color-2-light, $color-2);
+$linear-gradient-3: linear-gradient(
+    to right bottom, 
+    $color-3-light, $color-3-dark);
 
 // FONT
 $default-font-size: 1.6rem;
