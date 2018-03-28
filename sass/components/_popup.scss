@@ -26,11 +26,34 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+
+        @include respond(tab-land) {
+            width: 90vw;
+        }
+
+        @include respond(tab-port) {
+            height: 50vh;
+        }
+
+        @include respond(phone) {
+            display: block;
+            position: relative;
+            height: auto;
+            width: 100vw;
+        }
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        @include respond(tab-port) {
+            vertical-align: middle;
+        }
+
+        @include respond(phone) {
+            display: block;
+        }
     }
 
     &__right {
@@ -38,11 +61,19 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-port) {
+            vertical-align: top;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__text {
@@ -60,6 +91,17 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+
+            -moz-column-count: 1;
+            -moz-column-gap: 4rem;
+            -moz-column-rule: 1px solid $color-grey-light-2;
+            column-count: 1;
+            column-gap: 2rem;
+            column-rule: 1px solid $color-grey-light-2;
+        }
     }
 
     &:target {
