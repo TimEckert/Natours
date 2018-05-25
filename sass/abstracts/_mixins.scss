@@ -33,18 +33,18 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 */
 @mixin respond($breakpoint) {                           // rem/em are not based on what we defined earlier in _base but 
     @if $breakpoint == phone {                          // on browser default (16px). Rem sometimes fail so we use em (1em = 16px)
-        @media (max-width: 37.5em) { @content };    // = 600px
+        @media only screen and (max-width: 37.5em) { @content };    // = 600px
     }
 
     @if $breakpoint == tab-port {
-        @media (max-width: 56.25em) { @content };   // = 900px
+        @media only screen and (max-width: 56.25em) { @content };   // = 900px
     }
 
     @if $breakpoint == tab-land {
-        @media (max-width: 75rem) { @content };    // = 1200px
+        @media only screen and (max-width: 75rem) { @content };    // = 1200px
     }
 
     @if $breakpoint == big-desktop {
-        @media (min-width: 112.5em) { @content };   // = 1800px
+        @media only screen and (min-width: 112.5em) { @content };   // = 1800px
     }
 }
